@@ -9,4 +9,10 @@ angular.module('app', dependencies)
   .config(function ($stateProvider, $urlRouterProvider) {
     'ngInject';
     $urlRouterProvider.otherwise('/');
+
+    $stateProvider
+      .state('home', {
+        url: '/home',
+        template: '<h1>home</h1>'
+      })
   });
