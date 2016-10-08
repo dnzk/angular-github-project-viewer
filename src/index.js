@@ -12,7 +12,11 @@ angular.module('app', dependencies)
 
     $stateProvider
       .state('home', {
-        url: '/home',
-        template: '<h1>home</h1>'
+        url: '/',
+        template: '<h1>home</h1.'
+      })
+      .state('away', {
+        url: '/away',
+        template: '<h1>away</h1>'
       })
   });
