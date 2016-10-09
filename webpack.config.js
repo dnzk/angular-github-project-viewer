@@ -1,16 +1,19 @@
+var path = require('path');
 var bourbon = require('node-bourbon').includePaths;
+// var subscript = require('markdown-it-sub');
+// var superscript = require('markdown-it-sup');
 
 module.exports = {
   devtool: 'sourcemap',
-  entry: `${__dirname}/src/index.js`,
+  entry: path.join(__dirname, 'src/index.js'),
   output: {
-    path: `${__dirname}/dist`,
+    path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
     publicPath: '/',
   },
   devServer: {
     inline: true,
-    contentBase: `${__dirname}/dist`,
+    contentBase: path.join(__dirname, 'dist'),
     port: 3333
   },
   module: {
@@ -28,10 +31,6 @@ module.exports = {
         test: /\.scss$/,
         loader: 'style!css!sass?includePaths[]=' + bourbon
       },
-      {
-        test: /\.md$/,
-        loader: 'html!markdown'
-      }
     ]
-  }
+  },
 };
