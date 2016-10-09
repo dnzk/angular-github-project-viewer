@@ -1,13 +1,15 @@
 <div id="user-component">
   <header>
-    User's project
+    <h1>
+      {{ userCtrl.header }}
+    </h1>
   </header>
 
   <div id="user-project-list">
     <ul>
       <li ng-repeat="repo in userCtrl.repos">
         <span>
-          <a href="#">{{ repo.name }}</a>
+          <a href ng-click="userCtrl.goToRepo(repo.name)">{{ repo.name }}</a>
         </span>
       </li>
     </ul>
