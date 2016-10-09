@@ -1,10 +1,12 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import ComponentsModule from './components/components';
+import CommonModule from './common/common';
 
 const dependencies = [
   uiRouter,
-  ComponentsModule.name
+  ComponentsModule.name,
+  CommonModule.name
 ];
 
 angular.module('app', dependencies)
@@ -18,11 +20,11 @@ angular.module('app', dependencies)
         component: 'search'
       })
       .state('user', {
-        url: '/user',
+        url: '/:user',
         component: 'user'
       })
       .state('project', {
-        url: '/user/project',
+        url: '/:user/:project',
         component: 'readme'
       })
   });

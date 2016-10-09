@@ -16,6 +16,7 @@
     "babel-loader": "^6.2.5",
     "babel-preset-es2015": "^6.16.0",
     "css-loader": "^0.25.0",
+    "markdown-loader": "^0.1.7",
     "ng-annotate-loader": "^0.2.0",
     "node-sass": "^3.10.1",
     "raw-loader": "^0.5.1",
@@ -27,6 +28,7 @@
   "dependencies": {
     "angular": "^1.5.8",
     "angular-ui-router": "^1.0.0-beta.3",
+    "markdown-it": "^8.0.0",
     "node-bourbon": "^4.2.8"
   }
 }

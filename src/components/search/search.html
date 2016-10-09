@@ -1,7 +1,7 @@
 <div id="search-component">
   <div id="search-box">
     <label>Github username</label>
-    <input type="text" />
-    <button type="button">Search</button>
+    <input type="text" ng-model="searchCtrl.username" />
+    <button type="button" ng-click="searchCtrl.search(searchCtrl.username)">Search</button>
   </div>
 </div>

@@ -5,10 +5,11 @@
 
   <div id="user-project-list">
     <ul>
-      <li><span><a href="#">Project 1</a></span></li>
-      <li><span><a href="#">Project 2</a></span></li>
-      <li><span><a href="#">Project 3</a></span></li>
-      <li><span><a href="#">Project 4</a></span></li>
+      <li ng-repeat="repo in userCtrl.repos">
+        <span>
+          <a href="#">{{ repo.name }}</a>
+        </span>
+      </li>
     </ul>
   </div>
 </div>

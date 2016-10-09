@@ -27,6 +27,10 @@ module.exports = {
       {
         test: /\.scss$/,
         loader: 'style!css!sass?includePaths[]=' + bourbon
+      },
+      {
+        test: /\.md$/,
+        loader: 'html!markdown'
       }
     ]
   }
