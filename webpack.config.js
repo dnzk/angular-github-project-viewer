@@ -1,6 +1,7 @@
 var bourbon = require('node-bourbon').includePaths;
 
 module.exports = {
+  devtool: 'sourcemap',
   entry: `${__dirname}/src/index.js`,
   output: {
     path: `${__dirname}/dist`,
@@ -18,6 +19,10 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loaders: ['ng-annotate', 'babel-loader?presets[]=es2015']
+      },
+      {
+        test: /\.html$/,
+        loader: 'raw'
       },
       {
         test: /\.scss$/,

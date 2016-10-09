@@ -1,8 +1,10 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
+import ComponentsModule from './components/components';
 
 const dependencies = [
   uiRouter,
+  ComponentsModule.name
 ];
 
 angular.module('app', dependencies)
@@ -13,10 +15,14 @@ angular.module('app', dependencies)
     $stateProvider
       .state('home', {
         url: '/',
-        template: '<h1>home</h1.'
+        component: 'search'
       })
-      .state('away', {
-        url: '/away',
-        template: '<h1>away</h1>'
+      .state('user', {
+        url: '/user',
+        component: 'user'
+      })
+      .state('project', {
+        url: '/user/project',
+        component: 'readme'
       })
   });
