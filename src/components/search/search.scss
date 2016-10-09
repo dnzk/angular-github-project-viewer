@@ -11,5 +11,20 @@
     @include align-items(center);
     width: 50%;
     height: 250px;
+    p {
+      margin-bottom: 0.5em;
+    }
+    #input {
+      @include display(flex);
+      height: 1.5em;
+      width: 250px;
+      input[type="text"] {
+        outline: none;
+        width: 75%;
+      }
+      button[type="button"] {
+        width: 25%;
+      }
+    }
   }
 }
