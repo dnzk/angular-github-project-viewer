@@ -28,7 +28,7 @@ module.exports = {
         loader: 'raw'
       },
       {
-        test: /\.scss$/,
+        test: /\.s?css$/,
         loader: 'style!css!sass?includePaths[]=' + bourbon
       },
     ]
