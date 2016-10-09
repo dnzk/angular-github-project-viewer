@@ -1,5 +1,11 @@
-<h1>
-  readme
-</h1>
-<div ng-bind-html="readmeCtrl.content">
+<div id="readme-component">
+  <page-header header="readmeCtrl.header">
+  </page-header>
+
+  <div id="readme-container">
+    <div id="readme-content">
+      <div ng-bind-html="readmeCtrl.content" class="markdown-body">
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,0 +1,16 @@
+@import 'bourbon';
+
+#readme-component {
+  position: relative;
+
+  #readme-container {
+    @include display(flex);
+    @include justify-content(center);
+    #readme-content {
+      @include display(flex);
+      @include justify-content(center);
+      padding-top: 100px;
+      width: 90%;
+    }
+  }
+}

@@ -4,6 +4,8 @@ class ReadmeController {
   constructor($state, UserModel, $sce) {
     this.$sce = $sce;
     this.converter = new showdown.Converter();
+    console.log($state.params.project);
+    this.header = $state.params.project;
 
     UserModel.getRepo($state.params.user, $state.params.project)
       .then((response) => {

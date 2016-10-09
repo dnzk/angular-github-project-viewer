@@ -30,6 +30,7 @@
   "dependencies": {
     "angular": "^1.5.8",
     "angular-ui-router": "^1.0.0-beta.3",
+    "github-markdown-css": "^2.4.1",
     "node-bourbon": "^4.2.8",
     "showdown": "^1.4.3"
   }
