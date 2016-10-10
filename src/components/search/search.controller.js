@@ -1,5 +1,7 @@
 class SearchController {
   constructor($state) {
+    'ngInject';
+    
     this.$state = $state;
   }
   search(username) {

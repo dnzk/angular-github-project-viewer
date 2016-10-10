@@ -1,5 +1,7 @@
 class UserController {
   constructor($state, UserModel) {
+    'ngInject';
+    
     this.repos = [];
     this.$state = $state;
     this.header = `${$state.params.user}'s projects`;

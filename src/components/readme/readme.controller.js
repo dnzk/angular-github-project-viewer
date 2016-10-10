@@ -2,6 +2,8 @@ import showdown from 'showdown';
 
 class ReadmeController {
   constructor($state, UserModel, $sce) {
+    'ngInject';
+
     this.$sce = $sce;
     this.converter = new showdown.Converter();
     this.header = `${$state.params.user} / ${$state.params.project}`;
@@ -19,7 +21,6 @@ class ReadmeController {
     this.content = this.$sce.trustAsHtml(html);
   }
   setNoContent() {
-    // this.content = `No content to display`;
     this.content = this.$sce.trustAsHtml('<h1>This repo has no readme</h1>');
   }
 }
