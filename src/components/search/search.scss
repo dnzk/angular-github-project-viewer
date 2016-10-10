@@ -4,6 +4,8 @@
   @include display(flex);
   @include justify-content(center);
   @include align-items(center);
+  height: 100%;
+  width: 100%;
   #search-box {
     @include display(flex);
     @include flex-direction(column);
