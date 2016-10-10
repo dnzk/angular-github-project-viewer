@@ -8,9 +8,9 @@ class UserController {
       .then(result => {
         this.setRepos(result.data);
       })
-      .catch(function (error) {
+      .catch((error) => {
         console.log(error);
-      })
+      });
   }
   setRepos(repos) {
     this.repos = repos;

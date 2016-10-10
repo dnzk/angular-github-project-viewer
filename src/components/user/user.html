@@ -3,7 +3,10 @@
   </page-header>
 
   <div id="user-project-list">
-    <ul>
+    <div ng-if="userCtrl.repos.length < 1" class="no-repo">
+      There's nothing to display. Either this user does not exist, or this user has no repo.
+    </div>
+    <ul ng-if="userCtrl.repos.length > 0">
       <li ng-repeat="repo in userCtrl.repos">
         <span>
           <a href ng-click="userCtrl.goToRepo(repo.name)">{{ repo.name }}</a>
